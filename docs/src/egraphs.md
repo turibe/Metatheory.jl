@@ -78,10 +78,10 @@ comm_monoid = @commutative_monoid (*) 1
 
 #### Theories and Algebraic Structures
 
-**The e-graphs backend can directly handle associativity, equalities
-commutativity and distributivity**, rules that are
-otherwise known of causing loops and require extensive user reasoning 
-in classical rewriting.
+The e-graphs backend can directly handle associativity, commutativity and distributivity,
+rules that are otherwise problematic in classical rewriting,
+where they are
+known for causing loops and requiring extensive user reasoning.
 
 ```jldoctest
 t = @theory a b c begin

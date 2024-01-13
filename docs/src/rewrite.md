@@ -38,7 +38,7 @@ Dynamic rules, are similar to anonymous functions. Instead of a symbolic
 substitution, the right hand of a dynamic `=>` rule is evaluated during
 rewriting: the values that produced a match are bound to the pattern variables.
 
-`~x` in the example is what is a **slot variable** (or *pattern* variable) named `x`. In a matcher pattern, slot variables are placeholders that match exactly one expression. When used on the consequent side, they stand in for the matched expression. If a slot variable appears twice in a matcher pattern, **in classical rewriting** all corresponding matches must be equal (as tested by `Base.isequal` function). Hence this rule says: if you see something added to itself, make it twice of that thing, and works as such.
+In the example, `~x` is a **slot variable** (or *pattern variable*) named `x`. In a matcher pattern, slot variables are placeholders that match exactly one expression. When used on the consequent side, they stand in for the matched expression. If a slot variable appears twice in a matcher pattern, **in classical rewriting** all corresponding matches must be equal (as tested by `Base.isequal` function). Hence this rule says: if you see something added to itself, make it twice of that thing, and works as such.
 
 If you try to apply this rule to an expression with triple angle, it will return `nothing` -- this is the way a rule signifies failure to match.
 ```julia:rewrite2
